@@ -1,0 +1,11 @@
+bootJar { enabled = false }
+jar { enabled = true }
+
+dependencies {
+
+	implementation ('com.amazonaws:aws-java-sdk-sqs:1.11.681')
+
+	// ElasticMQ (for Mocking SQS)
+	implementation ('org.elasticmq:elasticmq-core_2.13:0.15.3')
+	implementation ('org.elasticmq:elasticmq-rest-sqs_2.13:0.15.3')
+}

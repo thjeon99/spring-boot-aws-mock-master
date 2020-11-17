@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: local
+cloud:
+  aws:
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
+---
+spring:
+  profiles: local
+sqs:
+  mock:
+    enabled: true
+    randomPortEnabled: true
+  queues:
+    -
+      name: 'sample'
+    -
+      name: 'sample2'
+    -
+      name: 'sample3-dlq'
+    -
+      name: 'sample3'
+      defaultVisibilityTimeout: 1
+      delay: 0
+      receiveMessageWait: 0
+      deadLettersQueue:
+        name: "sample3-dlq"
+        maxReceiveCount: 1
+
+

@@ -1,0 +1,4 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.github.thjeon99.sqs.AwsMockSqsAutoConfiguration,\
+com.github.thjeon99.sqs.AwsMockSqsServerAutoConfiguration
